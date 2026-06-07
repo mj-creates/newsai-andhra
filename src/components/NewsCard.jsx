@@ -66,6 +66,13 @@ const NewsCard = ({ article }) => {
           )}
         </ul>
 
+        {/* Raw Description / Original News Snippet */}
+        {article.description && Array.isArray(article.summary) && article.summary.length > 0 && (
+          <div className="news-card-raw-desc">
+            <p>{article.description}</p>
+          </div>
+        )}
+
         {/* Card Footer with Source Info and Link */}
         <div className="news-card-footer">
           <span className="news-card-source">{sourceName || "Local News"}</span>
