@@ -432,6 +432,9 @@ const App = () => {
               </div>
             </div>
           </main>
+          <footer className="app-footer">
+            <p>Created by ~manasWINi MJ</p>
+          </footer>
         </div>
       )}
     </>

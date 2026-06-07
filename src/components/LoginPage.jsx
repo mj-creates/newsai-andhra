@@ -272,6 +272,7 @@ const LoginPage = ({ onLogin, showToast }) => {
           </form>
 
           <div className="login-divider">Credentials validated via secure server</div>
+          <div className="creator-credit">Created by ~manasWINi MJ</div>
         </div>
       </div>
     </div>
