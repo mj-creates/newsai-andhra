@@ -8,6 +8,7 @@ import SkeletonLoader from "./components/SkeletonLoader";
 import Toast from "./components/Toast";
 import { fetchNewsByRegion } from "./services/newsApi";
 import { summarizeNews, summarizeCustomArticle } from "./services/geminiApi";
+import { API_BASE_URL } from "./config";
 import "./App.css";
 
 const App = () => {
@@ -178,7 +179,7 @@ const App = () => {
         sourceUrl = articleUrl;
         
         // Call backend scraping endpoint
-        const scrapeResponse = await fetch("http://localhost:5000/scrape", {
+        const scrapeResponse = await fetch(`${API_BASE_URL}/scrape`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ url: articleUrl })

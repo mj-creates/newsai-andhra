@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { API_BASE_URL } from "../config";
 
 const LoginPage = ({ onLogin, showToast }) => {
   const [activeTab, setActiveTab] = useState("signin"); // "signin" or "signup"
@@ -54,7 +55,7 @@ const LoginPage = ({ onLogin, showToast }) => {
     try {
       if (activeTab === "signin") {
         // Sign In Request
-        const res = await fetch("http://localhost:5000/auth/signin", {
+        const res = await fetch(`${API_BASE_URL}/auth/signin`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ email, password })
@@ -70,7 +71,7 @@ const LoginPage = ({ onLogin, showToast }) => {
         onLogin(data.user);
       } else {
         // Sign Up Request
-        const res = await fetch("http://localhost:5000/auth/signup", {
+        const res = await fetch(`${API_BASE_URL}/auth/signup`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ username: fullName, email, password })
