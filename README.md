@@ -1,16 +1,40 @@
-# React + Vite
+# 📰 NewsAI Andhra
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An AI-powered regional news summarizer for Andhra Pradesh, India.
 
-Currently, two official plugins are available:
+## 🔍 What it does
+- Select any of the 26 districts of Andhra Pradesh
+- Fetches live news from Telugu newspapers (Eenadu, Sakshi, Andhrajyothi)
+- Generates an AI summary using Groq LLaMA3
+- Interactive map that animates and zooms into the selected district
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🛠️ Tech Stack
+- **Frontend:** React, Vite, Leaflet.js
+- **Backend:** Node.js, Express, RSS Parser
+- **AI:** Groq API (LLaMA3)
+- **News Sources:** Eenadu, Sakshi, Andhrajyothi, Times of India AP
 
-## React Compiler
+## 🚀 How to run locally
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Frontend
+```bash
+cd news-ai
+npm install
+npm run dev
+```
 
-## Expanding the ESLint configuration
+### Backend
+```bash
+cd news-ai-backend
+npm install
+node index.js
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Environment Variables
+Create a `.env` file in `news-ai` folder:
+VITE_NEWS_API_KEY=your_newsapi_key
+VITE_GROQ_API_KEY=your_groq_key
+
+
+## 👩‍💻 Built by
+Manaswini — B.Tech CSE, VFSTR University
